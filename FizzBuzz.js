@@ -1,26 +1,22 @@
-//fizzbuzz extended
+//fizzbuzz with line breaks
+var fizzbuzz = function(num){
 
+  var fizzBuzzStr = "";
 
-/*
-
-  num : number to count to;
-  ext : numbers for which to trigger fizzbuzzXXX
-  msg : message to output when ext triggered
-
-*/
-
-
-var refs = {
-  3: "Fizz",
-  5: "Buzz",
-  9: "Sivv",
-  11: "Clutch",
-}
-
-var fizzBuzzArr = function(max, refs){
-
-  for(var i = 1; i<=max; i++){
-    Object.keys(refs);
+  for (var i = 1; i<=num; i++){
+    if(i%3!=0 && i%5!=0){
+      fizzBuzzStr = fizzBuzzStr + i.toString() + '\n';
+    }
+    if(i%5==0 && i%3==0){
+      fizzBuzzStr = fizzBuzzStr + 'FizzBuzz' + '\n';
+    }
+    if(i%3==0 && (i%5!=0 || i%3!=0)){
+      fizzBuzzStr = fizzBuzzStr + 'Fizz' + '\n';
+    }
+    if(i%5==0 && (i%5!=0 || i%3!=0)){
+      fizzBuzzStr = fizzBuzzStr + 'Buzz' + '\n';
+    }
   }
 
+  console.log(fizzBuzzStr);
 }
