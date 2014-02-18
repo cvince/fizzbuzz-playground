@@ -15,7 +15,7 @@ var refs = {
   13: "Pop"
 }
 
-var fizzBuzzArr = function(max, refs){
+var fizzBuzzExt = function(max, refs){
 
   for(var i = 1; i<=max; i++){
     var fbOutput = "";
